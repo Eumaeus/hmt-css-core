@@ -79,6 +79,9 @@ ul, ol {
 ul {
   list-style-type: circle; }
 
+li {
+  margin: 0.5em 0 0.5em 0; }
+
 a {
   color: navy;
   text-decoration: none; }
@@ -105,21 +108,28 @@ header, footer {
   clear: both; }
 
 header {
-  border-bottom: 1px solid #aaaaaa; }
+  border-bottom: 1px solid #aaaaaa;
+  padding-bottom: 0.5em; }
 
 footer {
-  border-top: 1px solid #aaaaaa; }
+  border-top: 1px solid #aaaaaa;
+  padding-top: 0.5em; }
 
 /* Nav */
-nav {
+nav, .nav {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: normal;
+  color: maroon;
+  margin: 0.5em 0 0.5em 0;
   border: none; }
-  nav ul {
+  nav ul, .nav ul {
     list-style: none;
     margin-left: 0; }
-    nav ul li {
+    nav ul li, .nav ul li {
       display: inline;
       padding: 0 0.5em 0 0.5em;
-      border-left: 1px solid maroon; }
-    nav ul li:nth-child(1) {
+      border-left: 1px solid maroon;
+      margin: 0; }
+    nav ul li:nth-child(1), .nav ul li:nth-child(1) {
       border-left: none;
       padding-left: 0em; }

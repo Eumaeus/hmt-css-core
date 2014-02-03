@@ -70,6 +70,9 @@ ul {
        list-style-type: circle;
        }
 
+       li {
+               margin: $default-whitespace 0 $default-whitespace 0;
+       }
 
 a {
       color: $accent-color;
@@ -103,15 +106,18 @@ header, footer {
 
 header {
         border-bottom: 1px solid $subtle-color;
+        padding-bottom: $default-whitespace;
 }
 footer{
         border-top: 1px solid $subtle-color;
+        padding-top: $default-whitespace;
 }
                 
 
 
 /* Nav */
-nav {
+nav,.nav {
+        @include display-font;
         border: none;
 
         ul {
@@ -121,6 +127,7 @@ nav {
                         display: inline;
                         padding: 0 $default-whitespace 0 $default-whitespace;
                         border-left: 1px solid $heading-color;
+                        margin: 0;
                 }
                 li:nth-child(1) {
                         border-left: none;
