@@ -45,16 +45,56 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* Variables */
+/* Mixins */
+/*  Structure  */
 body {
-  font-family: "MinionPro-Regular", Gentium, Times, serif;
+  font-family: Times, serif;
   font-size: 12pt;
-  font-weight: normal;
+  font-weight: 300;
   padding: 0.5em;
   background-color: #fff; }
 
+header, footer {
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  color: maroon;
+  margin: 0.5em 0 0.5em 0;
+  color: #aaaaaa;
+  font-size: 75%;
+  margin: 1em 0 1em 0;
+  clear: both; }
+
+header {
+  border-bottom: 1px solid #aaaaaa;
+  padding-bottom: 0.5em; }
+
+footer {
+  border-top: 1px solid #aaaaaa;
+  padding-top: 0.5em; }
+
+nav, .nav {
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  color: maroon;
+  margin: 0.5em 0 0.5em 0;
+  border: none; }
+  nav ul, .nav ul {
+    list-style: none;
+    margin-left: 0; }
+    nav ul li, .nav ul li {
+      display: inline;
+      padding: 0 0.5em 0 0.5em;
+      border-left: 1px solid maroon;
+      margin: 0; }
+    nav ul li:nth-child(1), .nav ul li:nth-child(1) {
+      border-left: none;
+      padding-left: 0em; }
+
+/* Blocks */
 h1, h2, h3 {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: normal;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
   color: maroon;
   margin: 0.5em 0 0.5em 0;
   margin: 1em 0 0.5em 0;
@@ -82,6 +122,18 @@ ul {
 li {
   margin: 0.5em 0 0.5em 0; }
 
+blockquote {
+  margin: 0.5em 0 0.5em 1.5em;
+  border: 1px dashed #c3c3c3;
+  padding: 0.5em; }
+
+/* Spans */
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: 900; }
+
 a {
   color: navy;
   text-decoration: none; }
@@ -89,47 +141,6 @@ a {
 a:hover {
   border-bottom: 1px solid #aaaaaa; }
 
-blockquote {
-  margin: 1em 4em 1.5em 1.5em;
-  border: 1px dashed #aaaaaa; }
-
 code {
-  font-family: "DejaVuSansMono", Courier, fixed;
+  font-family: Courier, fixed;
   font-size: 90%; }
-
-header, footer {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: normal;
-  color: maroon;
-  margin: 0.5em 0 0.5em 0;
-  color: #aaaaaa;
-  font-size: 75%;
-  margin: 1em 0 1em 0;
-  clear: both; }
-
-header {
-  border-bottom: 1px solid #aaaaaa;
-  padding-bottom: 0.5em; }
-
-footer {
-  border-top: 1px solid #aaaaaa;
-  padding-top: 0.5em; }
-
-/* Nav */
-nav, .nav {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: normal;
-  color: maroon;
-  margin: 0.5em 0 0.5em 0;
-  border: none; }
-  nav ul, .nav ul {
-    list-style: none;
-    margin-left: 0; }
-    nav ul li, .nav ul li {
-      display: inline;
-      padding: 0 0.5em 0 0.5em;
-      border-left: 1px solid maroon;
-      margin: 0; }
-    nav ul li:nth-child(1), .nav ul li:nth-child(1) {
-      border-left: none;
-      padding-left: 0em; }

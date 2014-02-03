@@ -9,6 +9,3 @@ Basic css styling for CITE projects and pages for the Homer Multitext
 
 `test-content/test.html` is generated using [pandoc](http://johnmacfarlane.net/pandoc/). From the project's root: `pandoc -s -S -c ../css/hmt-core.css test-content/test.md -o test-content/test.html`.
 
-## Note on including
-
-For **citeservler**: `cp PATH/TO/hmt-css-core/css/hmt-core.css PATH/TO/cite-servlet/src/main/webapp/css/`.

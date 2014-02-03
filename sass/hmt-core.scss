@@ -2,11 +2,14 @@
 
 @import 'reset';
 
-$display-font-stack:  "Helvetica Neue", Helvetica, sans-serif;
-$body-font-stack:  "MinionPro-Regular", Gentium, Times, serif;
-$code-font-stack:   "DejaVuSansMono", Courier, fixed;
+/* Variables */
+
+$display-font-stack:  Helvetica, sans-serif;
+$body-font-stack:  Times, serif;
+$code-font-stack:   Courier, fixed;
 
 $medium-font: 12pt;
+$normal-font-weight: 300;
 
 $default-whitespace: 0.5em;
 
@@ -14,11 +17,12 @@ $heading-color: maroon;
 $subtle-color: #aaa;
 $accent-color: navy;
 
+/* Mixins */
 
 @mixin display-font {
         font: {
                 family: $display-font-stack;
-                weight: normal;
+                weight: $normal-font-weight;;
         }
         color: $heading-color;
         margin: $default-whitespace 0 $default-whitespace 0;
@@ -28,15 +32,56 @@ $accent-color: navy;
         font: {
                 family: $body-font-stack;
                 size: $medium-font;
-                weight: normal;
+                weight: $normal-font-weight;
         }
         padding: $default-whitespace;
 }
+
+/*  Structure  */
 
 body {
         @include body-font;
         background-color: #fff;
 }
+
+header, footer {
+        @include display-font;
+        color: $subtle-color;
+        font-size: 75%;
+        margin: ($default-whitespace * 2) 0 ($default-whitespace * 2) 0;
+        clear: both;
+}
+
+header {
+        border-bottom: 1px solid $subtle-color;
+        padding-bottom: $default-whitespace;
+}
+footer{
+        border-top: 1px solid $subtle-color;
+        padding-top: $default-whitespace;
+}
+
+nav,.nav {
+        @include display-font;
+        border: none;
+        ul {
+                list-style: none;
+                margin-left: 0;
+                li{
+                        display: inline;
+                        padding: 0 $default-whitespace 0 $default-whitespace;
+                        border-left: 1px solid $heading-color;
+                        margin: 0;
+                }
+                li:nth-child(1) {
+                        border-left: none;
+                        padding-left: 0em;
+                }
+        }
+
+}
+                
+/* Blocks */
 
 h1, h2, h3 { 
         @include display-font;
@@ -74,6 +119,23 @@ ul {
                margin: $default-whitespace 0 $default-whitespace 0;
        }
 
+blockquote {
+        margin: ($default-whitespace) 0 ($default-whitespace) ($default-whitespace * 3);
+        border: 1px dashed lighten($subtle-color, 10%);
+        padding: $default-whitespace;
+}
+
+/* Spans */
+
+em {
+        font-style: italic; 
+}
+
+strong {
+        font-weight: $normal-font-weight * 3;
+}
+
+
 a {
       color: $accent-color;
       text-decoration: none;
@@ -81,11 +143,6 @@ a {
 
 a:hover {
         border-bottom: 1px solid $subtle-color;
-}
-
-blockquote {
-        margin: ($default-whitespace * 2) ($default-whitespace * 8) ($default-whitespace * 3) ($default-whitespace * 3);
-        border: 1px dashed $subtle-color;
 }
 
 code {
@@ -96,43 +153,4 @@ code {
 
 }
 
-header, footer {
-        @include display-font;
-        color: $subtle-color;
-        font-size: 75%;
-        margin: ($default-whitespace * 2) 0 ($default-whitespace * 2) 0;
-        clear: both;
-}
 
-header {
-        border-bottom: 1px solid $subtle-color;
-        padding-bottom: $default-whitespace;
-}
-footer{
-        border-top: 1px solid $subtle-color;
-        padding-top: $default-whitespace;
-}
-                
-
-
-/* Nav */
-nav,.nav {
-        @include display-font;
-        border: none;
-
-        ul {
-                list-style: none;
-                margin-left: 0;
-                li{
-                        display: inline;
-                        padding: 0 $default-whitespace 0 $default-whitespace;
-                        border-left: 1px solid $heading-color;
-                        margin: 0;
-                }
-                li:nth-child(1) {
-                        border-left: none;
-                        padding-left: 0em;
-                }
-        }
-
-}

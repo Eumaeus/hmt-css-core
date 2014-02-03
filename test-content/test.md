@@ -24,6 +24,8 @@ This document demonstrates the core css theming provided by `hmt-core.css`.
 1. List item 3.
 1. List item 4.
 
+And we need some _emphasized text_ to test. As well as some **strong text**.
+
 ## Level 2 Heading
 
 And some content.
