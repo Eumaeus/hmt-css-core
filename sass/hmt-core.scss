@@ -1,0 +1,131 @@
+/* _hmt-core.scss */
+
+@import 'reset';
+
+$display-font-stack:  "Helvetica Neue", Helvetica, sans-serif;
+$body-font-stack:  "MinionPro-Regular", Gentium, Times, serif;
+$code-font-stack:   "DejaVuSansMono", Courier, fixed;
+
+$medium-font: 12pt;
+
+$default-whitespace: 0.5em;
+
+$heading-color: maroon;
+$subtle-color: #aaa;
+$accent-color: navy;
+
+
+@mixin display-font {
+        font: {
+                family: $display-font-stack;
+                weight: normal;
+        }
+        color: $heading-color;
+        margin: $default-whitespace 0 $default-whitespace 0;
+}
+
+@mixin body-font {
+        font: {
+                family: $body-font-stack;
+                size: $medium-font;
+                weight: normal;
+        }
+        padding: $default-whitespace;
+}
+
+body {
+        @include body-font;
+        background-color: #fff;
+}
+
+h1, h2, h3 { 
+        @include display-font;
+        margin: ($default-whitespace * 2) 0 $default-whitespace 0;
+        font-weight: 200;
+        text-indent: -0.1em;
+}
+
+h1 {
+        font-size: 175%;
+}
+
+h2 {
+        font-size: 150%;
+}
+
+h3 {
+        font-size: 125%;
+}
+
+
+p,ul,ol {
+        margin: $default-whitespace 0 $default-whitespace 0;
+}
+
+ul,ol {
+        margin-left: $default-whitespace * 3;
+}
+
+ul {
+       list-style-type: circle;
+       }
+
+
+a {
+      color: $accent-color;
+      text-decoration: none;
+}
+
+a:hover {
+        border-bottom: 1px solid $subtle-color;
+}
+
+blockquote {
+        margin: ($default-whitespace * 2) ($default-whitespace * 8) ($default-whitespace * 3) ($default-whitespace * 3);
+        border: 1px dashed $subtle-color;
+}
+
+code {
+        font: {
+                family: $code-font-stack;
+                size: 90%;
+        }
+
+}
+
+header, footer {
+        @include display-font;
+        color: $subtle-color;
+        font-size: 75%;
+        margin: ($default-whitespace * 2) 0 ($default-whitespace * 2) 0;
+        clear: both;
+}
+
+header {
+        border-bottom: 1px solid $subtle-color;
+}
+footer{
+        border-top: 1px solid $subtle-color;
+}
+                
+
+
+/* Nav */
+nav {
+        border: none;
+
+        ul {
+                list-style: none;
+                margin-left: 0;
+                li{
+                        display: inline;
+                        padding: 0 $default-whitespace 0 $default-whitespace;
+                        border-left: 1px solid $heading-color;
+                }
+                li:nth-child(1) {
+                        border-left: none;
+                        padding-left: 0em;
+                }
+        }
+
+}

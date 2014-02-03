@@ -1,0 +1,125 @@
+/* _hmt-core.scss */
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: "MinionPro-Regular", Gentium, Times, serif;
+  font-size: 12pt;
+  font-weight: normal;
+  padding: 0.5em;
+  background-color: #fff; }
+
+h1, h2, h3 {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: normal;
+  color: maroon;
+  margin: 0.5em 0 0.5em 0;
+  margin: 1em 0 0.5em 0;
+  font-weight: 200;
+  text-indent: -0.1em; }
+
+h1 {
+  font-size: 175%; }
+
+h2 {
+  font-size: 150%; }
+
+h3 {
+  font-size: 125%; }
+
+p, ul, ol {
+  margin: 0.5em 0 0.5em 0; }
+
+ul, ol {
+  margin-left: 1.5em; }
+
+ul {
+  list-style-type: circle; }
+
+a {
+  color: navy;
+  text-decoration: none; }
+
+a:hover {
+  border-bottom: 1px solid #aaaaaa; }
+
+blockquote {
+  margin: 1em 4em 1.5em 1.5em;
+  border: 1px dashed #aaaaaa; }
+
+code {
+  font-family: "DejaVuSansMono", Courier, fixed;
+  font-size: 90%; }
+
+header, footer {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: normal;
+  color: maroon;
+  margin: 0.5em 0 0.5em 0;
+  color: #aaaaaa;
+  font-size: 75%;
+  margin: 1em 0 1em 0;
+  clear: both; }
+
+header {
+  border-bottom: 1px solid #aaaaaa; }
+
+footer {
+  border-top: 1px solid #aaaaaa; }
+
+/* Nav */
+nav {
+  border: none; }
+  nav ul {
+    list-style: none;
+    margin-left: 0; }
+    nav ul li {
+      display: inline;
+      padding: 0 0.5em 0 0.5em;
+      border-left: 1px solid maroon; }
+    nav ul li:nth-child(1) {
+      border-left: none;
+      padding-left: 0em; }
