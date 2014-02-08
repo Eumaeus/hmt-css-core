@@ -42,7 +42,7 @@ $accent-color: lighten(navy,10%);
 body {
         @include body-font;
         background-color: #fff;
-        padding: $default-whitespace * 2;
+        padding: $default-whitespace * 4;
 }
 
 header, footer {
