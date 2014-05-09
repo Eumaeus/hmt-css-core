@@ -8,12 +8,13 @@ $display-font-stack:  Helvetica, sans-serif;
 $body-font-stack:  Times, serif;
 $code-font-stack:   Courier, fixed;
 
-$medium-font: 12pt;
+//$medium-font: 12pt;
 $normal-font-weight: 300;
 
 $default-whitespace: 0.5em;
 
 $heading-color: maroon;
+$text-color: #676767; 
 $subtle-color: #aaa;
 $accent-color: lighten(navy,10%);
 
@@ -31,10 +32,12 @@ $accent-color: lighten(navy,10%);
 @mixin body-font {
         font: {
                 family: $body-font-stack;
-                size: $medium-font;
+                //size: $medium-font;
                 weight: $normal-font-weight;
         }
+        line-height: 1.8;
         padding: $default-whitespace;
+        color: $text-color;
 }
 
 /*  Structure  */
@@ -62,8 +65,14 @@ footer{
         padding-top: $default-whitespace;
 }
 
+article, header, footer, nav {
+        margin-left: ($default-whitespace * 2);
+}
+
+
 nav,.nav {
         @include display-font;
+        margin: ($default-whitespace * 2) 0 ($default-whitespace * 2) 0;
         border: none;
         ul {
                 list-style: none;
@@ -110,15 +119,19 @@ p,ul,ol {
 
 ul,ol {
         margin-left: $default-whitespace * 3;
+       li {
+               margin: $default-whitespace 0 $default-whitespace 0;
+       }
 }
 
 ul {
        list-style-type: circle;
-       }
+}
 
-       li {
-               margin: $default-whitespace 0 $default-whitespace 0;
-       }
+
+ol {
+       list-style-type: decimal;
+}
 
 blockquote {
         margin: ($default-whitespace) 0 ($default-whitespace) ($default-whitespace * 3);
